@@ -31,12 +31,12 @@ namespace Website.sitecore_modules.Shell.MediaEmbedModule {
         protected global::System.Web.UI.WebControls.TextBox SearchBox;
         
         /// <summary>
-        /// MediaEmbedRepeater control.
+        /// PageNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater MediaEmbedRepeater;
+        protected global::System.Web.UI.WebControls.Label PageNumber;
     }
 }

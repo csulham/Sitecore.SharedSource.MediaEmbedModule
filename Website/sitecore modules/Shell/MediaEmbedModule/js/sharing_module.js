@@ -2,7 +2,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 
 	mediaEmbedModule.populate = (function($){
 		'use strict ';
-		var servicePath = 'data/api.json',
+		var servicePath = 'GetMedia.aspx/GetMore',
 		$resultList = $('.media-embed-module-results'),
 		currentResult = '',
 		searchTop,
@@ -24,11 +24,13 @@ var mediaEmbedModule = mediaEmbedModule || {};
 			}
 		}
 		//JSON call to the api
-		var serviceCall = function(){
+		var serviceCall = function (search, page) {
 			$.ajax({
-				url: servicePath,
-				type: 'GET',
-				dataType: 'json',
+				url: "GetMedia.aspx/GetMore",
+				type: "POST",
+				dataType: "json",
+				data: "{'search': '" + search + "', 'page': " + page + "}",
+				contentType: "application/json; charset=utf-8"
 			})
 			.done(function(data) {
 				console.log("%c" + 'Success', debug.theme1);
@@ -66,7 +68,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 
 			$(window).scroll(function() {
     			if ( $(document).scrollTop() + 2000 >= document.body.offsetHeight) { 
-    				serviceCall();
+    				serviceCall("Trees", 2);
     			}  
 			});
 		}
@@ -77,7 +79,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 			if (debug.on){
 				debugData();
 			}
-			serviceCall();
+			serviceCall("Trees", 1);
 			infiniteScrollInit();
 		}
 

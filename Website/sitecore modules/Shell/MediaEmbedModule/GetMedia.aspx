@@ -21,25 +21,32 @@
 			</div>
 			<div class="media-embed-module-media-container">
 				<ul class="media-embed-module-results">
-	<asp:Repeater runat="server" ID="MediaEmbedRepeater" ItemType="FlickrNet.Photo" >
+	
+		<%--			<asp:Repeater runat="server" ID="MediaEmbedRepeater" ItemType="FlickrNet.Photo" >
 		<HeaderTemplate>
-			<%--Flickr Photos<br />--%>
+			
 		</HeaderTemplate>
 
 		<ItemTemplate>
 			<li class="media-embed-module-result medium-button"><a href="#" onclick="insertLink('<%#: Item.Small320Url %>');"><img src="<%#: Item.Small320Url %>" /></a>
-				<ul class="media-embed-buttons"><li class="small-button">Small</li><li class="medium-button">Medium</li><li class="large-button">Large</li></ul>
+				<ul class="media-embed-buttons">
+					<li class="small-button"><span onclick="insertLink('<%#: Item.Small320Url %>');">Small</span></li>
+					<li class="medium-button"><span onclick="insertLink('<%#: Item.Medium640Url %>');">Medium</span></li>
+					<li class="large-button"><span onclick="insertLink('<%#: Item.Medium800Url %>');">Large</span></li>
+				</ul>
 			</li>
 		</ItemTemplate>
 		<FooterTemplate>
 		
 		</FooterTemplate>
 
-	</asp:Repeater>
+	</asp:Repeater>--%>
 					</ul>
+				
 			</div>
 		</div>
 		<div class="media-embed-module-back">
+			Page <asp:Label runat="server" ID="PageNumber" CssClass="page-number" />
 		</div>
 	</div>
 
