@@ -19,7 +19,7 @@ body {
   background: white;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  height: 840px; }
+  height: 600px; }
   .sitecore-shared-source-media-embed-module.js-selected-media {
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg); }
@@ -37,7 +37,7 @@ body {
   .sitecore-shared-source-media-embed-module button {
     background: #2b2b2b;
     color: white;
-    padding: 15px 15px;
+    padding: 10px 10px;
     border: 0;
     text-align: center; }
   .sitecore-shared-source-media-embed-module .anchored {
@@ -47,7 +47,7 @@ body {
     max-width: 1000px;
     width: 100%;
     height: 100%;
-    max-height: 840px;
+    max-height: 600px;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     position: absolute;
@@ -72,7 +72,7 @@ body {
       max-width: 100%;
       box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
       height: auto;
-      max-height: 760px; }
+      max-height: 500px; }
   .sitecore-shared-source-media-embed-module .media-embed-module-options {
     width: 43%;
     padding: 0 4%;
@@ -80,7 +80,8 @@ body {
     max-height: 100%;
     display: inline-block; }
     .sitecore-shared-source-media-embed-module .media-embed-module-options h1 {
-      font-size: 1.8em; }
+      font-size: 1.8em;
+      margin: .2em 0; }
     .sitecore-shared-source-media-embed-module .media-embed-module-options fieldset {
       border: 0;
       margin-bottom: 20px;
@@ -95,7 +96,7 @@ body {
         width: 100%;
         margin-left: 3px;
         margin-right: 3px;
-        margin-bottom: 10px; }
+        margin-bottom: 6px; }
       .sitecore-shared-source-media-embed-module .media-embed-module-options fieldset legend {
         font-weight: bold;
         letter-spacing: .01em;
@@ -123,7 +124,7 @@ body {
     .sitecore-shared-source-media-embed-module .media-embed-module-sizes input + label {
       width: 30%; }
   .sitecore-shared-source-media-embed-module .media-embed-module-options-container {
-    width: 95%;
+    width: 100%;
     box-sizing: content-box;
     padding: 2.5%;
     height: 94%; }
@@ -158,7 +159,6 @@ body {
       border: 1px solid rgba(0, 0, 0, 0.1); }
   .sitecore-shared-source-media-embed-module .media-embed-module-options-controls {
     width: 100%;
-    margin-top: 100px;
     oveflow: show; }
   .sitecore-shared-source-media-embed-module .media-embed-module-publish {
     float: right;
@@ -173,7 +173,7 @@ body {
     .sitecore-shared-source-media-embed-module .media-embed-module-backbutton:hover {
       background: #1b1b1b; }
   .sitecore-shared-source-media-embed-module .media-embed-module-media-container {
-    height: 800px;
+    height: 600px;
     overflow: auto; }
   .sitecore-shared-source-media-embed-module .media-embed-module-results {
     list-style: none;

@@ -100,8 +100,11 @@
     <Content Include="sitecore modules\Shell\MediaEmbedModule\css\style.css" />
     <Content Include="FlickrNet.chm" />
     <Content Include="packages.config" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\gulp\.gitignore" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\gulp\gulpfile.js" />
     <Content Include="Web.config" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\data\api.js" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\gulp\package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

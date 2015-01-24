@@ -195,7 +195,6 @@ var mediaEmbedModule = mediaEmbedModule || {};
 			if (debug.on){
 				debugData();
 			}
-			$searchField.val("Trees");
 			setBindings();
 			infiniteScrollInit();
 			window.setTimeout(serviceCall($searchField.val(), page),500);
