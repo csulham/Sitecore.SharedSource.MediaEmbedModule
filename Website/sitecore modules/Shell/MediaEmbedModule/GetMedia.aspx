@@ -67,7 +67,8 @@
                     </fieldset>
                     <div class="media-embed-module-options-controls">
                         <button class="media-embed-module-backbutton">Back to Image Results</button>
-                        <button class="media-embed-module-publish" onclick="insertLink('')">Embed Image</button>
+                        <button class="media-embed-module-publish">Embed Image</button>
+						<a href="#" class="submit-link" style="display: none;" onclick="insertLink(embedLink);"></a>
                     </div>
                 </div>
             </div>

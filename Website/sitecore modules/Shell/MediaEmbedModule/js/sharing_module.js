@@ -1,3 +1,4 @@
+var embedLink = "";
 var mediaEmbedModule = mediaEmbedModule || {};
 
 	mediaEmbedModule.populate = (function($){
@@ -28,7 +29,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 			contentLoaded = false,
 			currentResult = '',
 			searchTop,
-			scrollOffset = 2000,
+			scrollOffset = 600,
 			resultItem = "media-embed-module-result",
 			results = {},
 			debug = {},
@@ -52,6 +53,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 		}
 		//JSON call to the api
 		var serviceCall = function (search, page) {
+			$searchContainer.off('scroll');
 			$.ajax({
 				url: "GetMedia.aspx/GetMore",
 				type: "POST",
@@ -65,7 +67,8 @@ var mediaEmbedModule = mediaEmbedModule || {};
 
 				results = data.d;
 				populateView();
-			})
+					infiniteScrollInit();
+				})
 			.fail(function(data) {
 				console.log("%c" + 'Error', debug.theme4);
 			})
@@ -167,12 +170,13 @@ var mediaEmbedModule = mediaEmbedModule || {};
 				if (linkValue.length > 5) {
 					htmlToPublish = "<a target='" + target + "'' href='" + linkValue + "'><img alt='" + imgTitle + "' class='" + $imageClass.val() + "'src='" + imgUrl + "'</a>";
 				} else {
-					htmlToPublish = "<img alt='" + imgTitle + "' class='" + $imageClass.val() + "'' src='" + imgUrl + "'>";
+					htmlToPublish = "<img alt='" + imgTitle + "' class='" + $imageClass.val() + "' src='" + imgUrl + "'>";
 				}
 				if (debug.on) {
 					console.log(htmlToPublish);
 				}
-				return htmlToPublish;
+				embedLink = htmlToPublish;
+				$('.submit-link').click();
 			});
 		};
 
