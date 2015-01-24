@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FlickrNet;
+using Sitecore.Mvc.Extensions;
 
 namespace Website.sitecore_modules.Shell.MediaEmbedModule
 {
@@ -20,10 +21,14 @@ namespace Website.sitecore_modules.Shell.MediaEmbedModule
 
             var options = new PhotoSearchOptions();
             options.PerPage = 9;
-            options.Tags = tags.TagList ?? "Trees";
+            options.Tags = tags.TagList = SearchBox.Text;
             options.SafeSearch = SafetyLevel.Moderate;
             options.Page = tags.Page;
 
+			if (string.IsNullOrEmpty(SearchBox.Text))
+			{
+				options.Tags = "Trees";
+			}
             tags.Results = flickr.PhotosSearch(options);
 
 			MediaEmbedRepeater.DataSource = tags.Results;

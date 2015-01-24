@@ -95,6 +95,8 @@
   <ItemGroup>
     <None Include="App_Config\Include\Local.config.example" />
     <None Include="App_Config\Include\Local.config" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\assets\background-texture.png" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\css\style.css" />
     <Content Include="FlickrNet.chm" />
     <Content Include="packages.config" />
   </ItemGroup>
@@ -136,8 +138,12 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\data\api.js" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\data\flicker.js" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\GetMedia.aspx" />
     <Content Include="sitecore\shell\Controls\Rich Text Editor\RichText Commands.js" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\icons\flickr.png" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\js\sharing_module.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
