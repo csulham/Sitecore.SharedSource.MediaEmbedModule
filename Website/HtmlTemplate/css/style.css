@@ -1,0 +1,83 @@
+body {
+  background-image: url('../assets/background-texture.png');
+  background-repeat: repeat; }
+
+.sitecore-shared-source-media-embed-module {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 100px;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-perspective: 1000;
+          perspective: 1000; }
+  .sitecore-shared-source-media-embed-module * {
+    box-sizing: border-box; }
+  .sitecore-shared-source-media-embed-module .anchored {
+    position: absolute;
+    top: 0; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-search-container {
+    overflow: hidden;
+    width: 98%;
+    padding: 20px 0 10px;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95); }
+  .sitecore-shared-source-media-embed-module .media-embed-module-search-field {
+    padding: 1em;
+    margin-right: 3.5%;
+    width: 40%;
+    float: right;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+    outline: none;
+    z-index: 9;
+    margin-bottom: 5px; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-search-field:focus {
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+  .sitecore-shared-source-media-embed-module .media-embed-module-media-container {
+    height: 800px;
+    overflow: auto; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-results {
+    list-style: none;
+    margin-top: 50px;
+    font-size: 0; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-result {
+    width: 29%;
+    border-radius: 2px;
+    text-align: center;
+    transition: height .5s, width .5s;
+    padding: 10px 10px 0 10px;
+    vertical-align: top;
+    float: left;
+    display: inline-block;
+    margin: 1%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); }
+    .sitecore-shared-source-media-embed-module .media-embed-module-result img {
+      max-width: 100%; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-result .media-embed-buttons {
+      opacity: 0;
+      transition: all .3s ease-in-out;
+      font-size: 14px;
+      padding: 20px 0;
+      list-style: none;
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif; }
+      .sitecore-shared-source-media-embed-module .media-embed-module-result .media-embed-buttons li {
+        display: inline-block;
+        transition: all .2s ease-in-out;
+        width: 28%;
+        padding: 2% 0;
+        margin: 0 1%;
+        background: #939393;
+        color: #ffffff;
+        cursor: pointer; }
+        .sitecore-shared-source-media-embed-module .media-embed-module-result .media-embed-buttons li:hover {
+          background: #777777; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-result:hover .media-embed-buttons {
+      opacity: 1; }
