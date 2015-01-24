@@ -171,11 +171,11 @@ RadEditorCommandList["InsertFlickrImage"] = function (commandName, editor, args)
     600,
     callback,
     null,
-    "Insert Flickr Media",
+    "Insert Flickr Image",
     true, //modal
     Telerik.Web.UI.WindowBehaviors.Close, // behaviors
     false, //showStatusBar
-    false //showTitleBar
+    true //showTitleBar
   );
 
 };
