@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Tds.Core", "src\Tds.Core\Tds.Core.scproj", "{659234A7-6D37-4DA7-92DA-0BB4471A0259}"
 EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Tds.Master", "src\Tds.Master\Tds.Master.scproj", "{36161706-7A4E-4CFD-BBB6-5AEC465178CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,12 @@ Global
 		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Release|Any CPU.Build.0 = Release|Any CPU
 		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{36161706-7A4E-4CFD-BBB6-5AEC465178CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36161706-7A4E-4CFD-BBB6-5AEC465178CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36161706-7A4E-4CFD-BBB6-5AEC465178CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{36161706-7A4E-4CFD-BBB6-5AEC465178CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36161706-7A4E-4CFD-BBB6-5AEC465178CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36161706-7A4E-4CFD-BBB6-5AEC465178CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
