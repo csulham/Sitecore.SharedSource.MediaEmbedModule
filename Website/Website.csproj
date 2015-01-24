@@ -100,6 +100,13 @@
     <Content Include="sitecore modules\Shell\MediaEmbedModule\css\style.css" />
     <Content Include="FlickrNet.chm" />
     <Content Include="packages.config" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
