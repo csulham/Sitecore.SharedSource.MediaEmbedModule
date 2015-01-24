@@ -228,3 +228,5 @@ Website/xsl/system/WebEdit/Hidden Rendering.xslt
 Website/sitecore_files/Web.config
 Website/temp/readme.txt
 Website/upload/readme.txt
+Website/temp/*
+Website/App_Data/*
