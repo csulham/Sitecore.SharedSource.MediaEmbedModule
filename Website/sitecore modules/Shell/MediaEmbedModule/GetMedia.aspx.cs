@@ -44,7 +44,7 @@ namespace Website.sitecore_modules.Shell.MediaEmbedModule
 			//MediaEmbedRepeater.DataSource = tags.Results;
 			//MediaEmbedRepeater.DataBind();
 
-			PageNumber.Text = "1";
+			//PageNumber.Text = "1";
 		}
 
 		//protected void BindRepeater(object sender, RepeaterItemEventArgs e)

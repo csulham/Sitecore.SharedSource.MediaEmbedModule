@@ -101,6 +101,7 @@
     <Content Include="FlickrNet.chm" />
     <Content Include="packages.config" />
     <Content Include="Web.config" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\data\api.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,7 +147,6 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="sitecore modules\Shell\MediaEmbedModule\data\api.js" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\data\flicker.js" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\GetMedia.aspx" />
     <Content Include="sitecore\shell\Controls\Rich Text Editor\RichText Commands.js" />

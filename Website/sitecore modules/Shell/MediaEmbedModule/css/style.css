@@ -3,33 +3,149 @@ body {
   background-repeat: repeat; }
 
 .sitecore-shared-source-media-embed-module {
+  color: #2b2b2b;
+  font-family: Helvetica, arial, sans-serif;
   max-width: 1000px;
   position: relative;
   margin-top: 100px;
-  background: white;
   width: 100%;
   box-sizing: border-box;
   padding: 1%;
   margin: 0 auto;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   -webkit-perspective: 1000;
-          perspective: 1000; }
+          perspective: 1000;
+  transition: 1s;
+  background: white;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 840px; }
+  .sitecore-shared-source-media-embed-module.js-selected-media {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
   .sitecore-shared-source-media-embed-module * {
     box-sizing: border-box; }
+  .sitecore-shared-source-media-embed-module input[type=text] {
+    padding: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+    outline: none; }
+    .sitecore-shared-source-media-embed-module input[type=text]:focus {
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: #f0f0f0; }
+  .sitecore-shared-source-media-embed-module button {
+    background: #2b2b2b;
+    color: white;
+    padding: 15px 15px;
+    border: 0;
+    text-align: center; }
   .sitecore-shared-source-media-embed-module .anchored {
     position: absolute;
     top: 0; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-front, .sitecore-shared-source-media-embed-module .media-embed-module-back {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    max-height: 840px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-front {
+    z-index: 2;
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  .sitecore-shared-source-media-embed-module .media-embed-module-back {
+    z-index: 9;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+  .sitecore-shared-source-media-embed-module .media-embed-module-preview {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 100%;
+    width: 55%;
+    text-align: center; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-preview img {
+      max-width: 100%;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+      height: auto;
+      max-height: 760px; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-options {
+    width: 43%;
+    padding: 0 4%;
+    vertical-align: middle;
+    max-height: 100%;
+    display: inline-block; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-options h1 {
+      font-size: 1.8em; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-options fieldset {
+      border: 0;
+      margin-bottom: 20px;
+      padding: 0; }
+      .sitecore-shared-source-media-embed-module .media-embed-module-options fieldset label {
+        font-size: .8em;
+        padding: .1em;
+        margin-left: .5em;
+        display: block;
+        margin-bottom: .5em; }
+      .sitecore-shared-source-media-embed-module .media-embed-module-options fieldset input[type=text] {
+        width: 100%;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 10px; }
+      .sitecore-shared-source-media-embed-module .media-embed-module-options fieldset legend {
+        font-weight: bold;
+        letter-spacing: .01em;
+        margin-bottom: 10px;
+        display: block;
+        padding: 5px;
+        border-bottom: 1px dashed #2b2b2b;
+        width: 100%; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-options input[type=radio] {
+      display: none; }
+      .sitecore-shared-source-media-embed-module .media-embed-module-options input[type=radio]:checked + label {
+        background: #2b2b2b;
+        color: #f0f0f0; }
+      .sitecore-shared-source-media-embed-module .media-embed-module-options input[type=radio] + label {
+        margin: 0;
+        display: inline-block;
+        margin: 0 1%;
+        padding: 10px 10px;
+        background: #f0f0f0;
+        border: 0;
+        color: #2b2b2b;
+        text-align: center; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-sizes input {
+    font-size: .8em; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-sizes input + label {
+      width: 30%; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-options-container {
+    width: 95%;
+    box-sizing: content-box;
+    padding: 2.5%;
+    height: 94%; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-options-container:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+      /* Adjusts for spacing */ }
   .sitecore-shared-source-media-embed-module .media-embed-module-search-container {
     overflow: hidden;
-    width: 98%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.15);
+    width: 100%;
     padding: 20px 0 10px;
     position: absolute;
     z-index: 9;
     top: 0;
-    background: rgba(255, 255, 255, 0.95); }
+    background: rgba(255, 255, 255, 0.85); }
   .sitecore-shared-source-media-embed-module .media-embed-module-search-field {
     padding: 1em;
-    margin-right: 3.5%;
+    margin-right: 2.5%;
     width: 40%;
     float: right;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -40,19 +156,36 @@ body {
     .sitecore-shared-source-media-embed-module .media-embed-module-search-field:focus {
       box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(0, 0, 0, 0.1); }
+  .sitecore-shared-source-media-embed-module .media-embed-module-options-controls {
+    width: 100%;
+    margin-top: 100px;
+    oveflow: show; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-publish {
+    float: right;
+    background: #DC291E;
+    color: white; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-publish:hover {
+      background: #c62223; }
+  .sitecore-shared-source-media-embed-module .media-embed-module-backbutton {
+    float: left;
+    background: #2b2b2b;
+    color: white; }
+    .sitecore-shared-source-media-embed-module .media-embed-module-backbutton:hover {
+      background: #1b1b1b; }
   .sitecore-shared-source-media-embed-module .media-embed-module-media-container {
     height: 800px;
     overflow: auto; }
   .sitecore-shared-source-media-embed-module .media-embed-module-results {
     list-style: none;
-    margin-top: 50px;
-    font-size: 0; }
+    margin-top: 90px;
+    font-size: 0;
+    padding: 0; }
   .sitecore-shared-source-media-embed-module .media-embed-module-result {
-    width: 29%;
+    width: 31%;
     border-radius: 2px;
     text-align: center;
     transition: height .5s, width .5s;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 30px 10px;
     vertical-align: top;
     float: left;
     display: inline-block;
@@ -60,24 +193,3 @@ body {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); }
     .sitecore-shared-source-media-embed-module .media-embed-module-result img {
       max-width: 100%; }
-    .sitecore-shared-source-media-embed-module .media-embed-module-result .media-embed-buttons {
-      opacity: 0;
-      transition: all .3s ease-in-out;
-      font-size: 14px;
-      padding: 20px 0;
-      list-style: none;
-      text-align: center;
-      font-family: Helvetica, Arial, sans-serif; }
-      .sitecore-shared-source-media-embed-module .media-embed-module-result .media-embed-buttons li {
-        display: inline-block;
-        transition: all .2s ease-in-out;
-        width: 28%;
-        padding: 2% 0;
-        margin: 0 1%;
-        background: #939393;
-        color: #ffffff;
-        cursor: pointer; }
-        .sitecore-shared-source-media-embed-module .media-embed-module-result .media-embed-buttons li:hover {
-          background: #777777; }
-    .sitecore-shared-source-media-embed-module .media-embed-module-result:hover .media-embed-buttons {
-      opacity: 1; }

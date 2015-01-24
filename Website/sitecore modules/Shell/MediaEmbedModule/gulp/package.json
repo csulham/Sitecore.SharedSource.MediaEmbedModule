@@ -1,0 +1,17 @@
+{
+  "name": "gulp-simple",
+  "version": "0.0.0",
+  "description": "",
+  "main": " ",
+  "devDependencies": {
+    "browser-sync": "^1.7.0",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-notify": "^2.0.0",
+    "gulp-pixrem": "^0.1.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-sass": "^1.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

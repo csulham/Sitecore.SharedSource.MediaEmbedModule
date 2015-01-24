@@ -13,49 +13,66 @@
 	<script src="js/sharing_module.js" type="text/javascript" charset="utf-8" async></script>
 </head>
 <body>
-		<form id="form1" runat="server">
-	<div class="sitecore-shared-source-media-embed-module">
-		<div class="media-embed-module-front">
-			<div class="media-embed-module-search-container">
-				<asp:TextBox ID="SearchBox" runat="server" CssClass="media-embed-module-search-field"></asp:TextBox>
-			</div>
-			<div class="media-embed-module-media-container">
-				<ul class="media-embed-module-results">
-	
-		<%--			<asp:Repeater runat="server" ID="MediaEmbedRepeater" ItemType="FlickrNet.Photo" >
-		<HeaderTemplate>
-			
-		</HeaderTemplate>
-
-		<ItemTemplate>
-			<li class="media-embed-module-result medium-button"><a href="#" onclick="insertLink('<%#: Item.Small320Url %>');"><img src="<%#: Item.Small320Url %>" /></a>
-				<ul class="media-embed-buttons">
-					<li class="small-button"><span onclick="insertLink('<%#: Item.Small320Url %>');">Small</span></li>
-					<li class="medium-button"><span onclick="insertLink('<%#: Item.Medium640Url %>');">Medium</span></li>
-					<li class="large-button"><span onclick="insertLink('<%#: Item.Medium800Url %>');">Large</span></li>
-				</ul>
-			</li>
-		</ItemTemplate>
-		<FooterTemplate>
-		
-		</FooterTemplate>
-
-	</asp:Repeater>--%>
-					</ul>
-				
-			</div>
-		</div>
-		<div class="media-embed-module-back">
-			Page <asp:Label runat="server" ID="PageNumber" CssClass="page-number" />
-		</div>
-	</div>
-
-		<div>
-			<input type="button" value="Close" onclick="getRadWindow().close();" />	
-			
-		</div>
+<form id="form1" runat="server">
+    <div class="sitecore-shared-source-media-embed-module">
+        <div class="media-embed-module-front">
+            <div class="media-embed-module-search-container">
+                <input class="media-embed-module-search-field" type="text" placeholder="Search By Tag, title or user">
+            </div>
+            <div class="media-embed-module-media-container">
+                <ul class="media-embed-module-results">
 
 
+                </ul>
+            </div>
+        </div>
+        <div class="media-embed-module-back">
+            <div class="media-embed-module-options-container">
+                <div class="media-embed-module-preview">
+                </div>
+                <div class="media-embed-module-options">
+                    <h1>Image Embed Settings </h1>
+                    <fieldset class="media-embed-module-sizes">
+                        <legend>Image Size</legend>
+                        <input type="radio" name="media-embed-module-size" id="media-embed-module-size-small" value="small" checked>
+                        <label for="media-embed-module-size-small">Small</label>
+
+                        <input type="radio" name="media-embed-module-size" value="medium" id="media-embed-module-size-medium">
+                        <label for="media-embed-module-size-medium">Medium</label>
+
+                        <input type="radio" name="media-embed-module-size" value="large" id="media-embed-module-size-large">
+                        <label for="media-embed-module-size-large">Large</label>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Image Properties</legend>
+
+                        <labeL>Add Classes to image</labeL>
+                        <input class="media-embed-module-image-classes" type="text" placeholder="large, profile-view">
+
+                        <labeL>Alt Text</labeL>
+                        <input type="text" placeholder="Text to display when hovered">
+                    </fieldset>
+
+                    <fieldset class="media-embed-module-link">
+                        <legend>Link (optional)</legend>
+
+                        <labeL>Link Location</labeL>
+                        <input class="media-embed-module-link-location" type="text" placeholder="http://sitecore.com">
+                        <input type="radio" name="media-embed-module-tab" value="same-tab" id="media-embed-module-same-tab" checked>
+                        <label for="media-embed-module-same-tab">Same Tab</label>
+
+                        <input type="radio" name="media-embed-module-tab" value="new-tab" id="media-embed-module-new-tab">
+                        <label for="media-embed-module-new-tab">New tab</label>
+                    </fieldset>
+                    <div class="media-embed-module-options-controls">
+                        <button class="media-embed-module-backbutton">Back to Image Results</button>
+                        <button class="media-embed-module-publish" onclick="insertLink('')">Embed Image</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 		<script language="javascript" type="text/javascript">
 
 			if (window.attachEvent) {
