@@ -124,7 +124,7 @@ body {
     .sitecore-shared-source-media-embed-module .media-embed-module-sizes input + label {
       width: 30%; }
   .sitecore-shared-source-media-embed-module .media-embed-module-options-container {
-    width: 100%;
+    width: 96%;
     box-sizing: content-box;
     padding: 2.5%;
     height: 94%; }
