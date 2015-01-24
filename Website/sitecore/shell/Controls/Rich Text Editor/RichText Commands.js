@@ -168,7 +168,7 @@ RadEditorCommandList["InsertFlickrImage"] = function (commandName, editor, args)
     "/sitecore modules/shell/MediaEmbedModule/GetMedia.aspx?source=Flickr",
     null, //argument
     800,
-    600,
+    625,
     callback,
     null,
     "Insert Flickr Image",
