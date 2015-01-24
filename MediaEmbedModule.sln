@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{70542611-F8F3-4D55-A491-0E23AE0A10AF}"
 EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Tds.Core", "src\Tds.Core\Tds.Core.scproj", "{659234A7-6D37-4DA7-92DA-0BB4471A0259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{70542611-F8F3-4D55-A491-0E23AE0A10AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70542611-F8F3-4D55-A491-0E23AE0A10AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70542611-F8F3-4D55-A491-0E23AE0A10AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659234A7-6D37-4DA7-92DA-0BB4471A0259}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
