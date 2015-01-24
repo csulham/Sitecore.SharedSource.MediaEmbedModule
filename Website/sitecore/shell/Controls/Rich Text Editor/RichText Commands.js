@@ -161,7 +161,7 @@ RadEditorCommandList["InsertFlickrImage"] = function (commandName, editor, args)
 	var returnValue;
 
 	var callback = function(sender, args) {
-		scEditor.pasteHtml("<img src=\"" + args + "\" />", "DocumentManager");
+		scEditor.pasteHtml(args);
 	}
 
 	editor.showExternalDialog(
