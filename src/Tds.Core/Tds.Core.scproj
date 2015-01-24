@@ -75,9 +75,11 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Rich Text Default\Toolbar 1\Divider 4.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Rich Text Default\Toolbar 1\Insert Flickr Image.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />

@@ -27,13 +27,13 @@ content-length: 38
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 57
+content-length: 33
 
-/sitecore modules/shell/mediaembedmodule/icons/flickr.png
+MediaEmbedModule/32x32/flickr.png
 ----version----
 language: en
 version: 1
-revision: 83e09cf0-c5e3-4872-bd98-e73231a1b15a
+revision: bf4394d8-d9a1-4173-8d33-35400334ccc4
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-83e09cf0-c5e3-4872-bd98-e73231a1b15a
+bf4394d8-d9a1-4173-8d33-35400334ccc4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 35
 
-20150124T193247:635577247679284370Z
+20150124T222053:635577348538902422Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
