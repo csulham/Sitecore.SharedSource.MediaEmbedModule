@@ -232,3 +232,5 @@ Website/temp/
 Website/App_Data/*
 Website/_DEV
 packages/
+Packages.dgml
+Settings.StyleCop
