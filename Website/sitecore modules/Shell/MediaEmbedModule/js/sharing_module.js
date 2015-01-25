@@ -33,7 +33,7 @@ mediaEmbedModule.populate = (function($) {
 			resultItem = "media-embed-module-result",
 			results = {},
 			debug = {},
-			globalPageNumber = 0;
+			globalPageNumber = 1;
 
 		//Debug Object Block.
 		debug.on = true;
@@ -68,6 +68,7 @@ mediaEmbedModule.populate = (function($) {
 					results = data.d;
 					populateView();
 					infiniteScrollInit();
+					globalPageNumber++;
 				})
 				.fail(function(data) {
 					console.log("%c" + 'Error', debug.theme4);
@@ -111,7 +112,7 @@ mediaEmbedModule.populate = (function($) {
 		var infiniteScrollInit = function(){
 			$searchContainer.scroll(function() {
     			if ( contentLoaded && (Math.abs($resultList.offset().top) + moduleHeight + scrollOffset > resultListHeight)){
-    				serviceCall($searchField.val(), globalPageNumber++);
+    				serviceCall($searchField.val(), globalPageNumber);
     			}  
 			});
 		};
@@ -131,7 +132,7 @@ mediaEmbedModule.populate = (function($) {
 				if( event.keyCode == 13){
 					event.preventDefault();
 					$resultList.html('');
-					globalPageNumber = 0;
+					globalPageNumber = 1;
 					serviceCall($searchField.val(), globalPageNumber);
 				}
 				else{
@@ -204,7 +205,7 @@ mediaEmbedModule.populate = (function($) {
 			}
 			setBindings();
 			infiniteScrollInit();
-			serviceCall($searchField.val(), 0);
+			serviceCall("trees", 0);
 		};
 		//Return only the init function, keeping all others private.
 		return{
