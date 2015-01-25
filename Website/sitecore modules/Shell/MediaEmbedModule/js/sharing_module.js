@@ -205,7 +205,7 @@ mediaEmbedModule.populate = (function($) {
 			}
 			setBindings();
 			infiniteScrollInit();
-			serviceCall("trees", 0);
+			serviceCall("", 0);
 		};
 		//Return only the init function, keeping all others private.
 		return{
