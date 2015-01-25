@@ -48,7 +48,7 @@ namespace Website.sitecore_modules.Shell.MediaEmbedModule
 			int perPage = 9;
 			Int32.TryParse(flickrSettings.Fields["Results Per Page"].Value, out perPage);
 			options.PerPage = perPage;
-			if (string.IsNullOrEmpty(search) && flickrSettings.Fields["Default Tags"].HasValue && !string.IsNullOrEmpty(flickrSettings.Fields["Default Tags"].Value))
+			if (string.IsNullOrEmpty(search) && flickrSettings.Fields["Default Tags"] != null && !string.IsNullOrEmpty(flickrSettings.Fields["Default Tags"].Value))
 				search = flickrSettings.Fields["Default Tags"].Value;
 			if (string.IsNullOrEmpty(search))
 				return new PhotoCollection();
