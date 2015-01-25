@@ -33,7 +33,7 @@ mediaEmbedModule.populate = (function($) {
 			resultItem = "media-embed-module-result",
 			results = {},
 			debug = {},
-			page = 1;
+			globalPageNumber = 0;
 
 		//Debug Object Block.
 		debug.on = true;
@@ -52,13 +52,13 @@ mediaEmbedModule.populate = (function($) {
 			}
 		}
 		//JSON call to the api
-		var serviceCall = function(search, page) {
+		var serviceCall = function(search, pageNumber) {
 			$searchContainer.off('scroll');
 			$.ajax({
 					url: "GetMedia.aspx/GetMore",
 					type: "POST",
 					dataType: "json",
-					data: "{'search': '" + search + "', 'page': " + page + "}",
+					data: "{'search': '" + search + "', 'page': " + pageNumber + "}",
 					contentType: "application/json; charset=utf-8"
 				})
 				.done(function(data) {
@@ -111,7 +111,7 @@ mediaEmbedModule.populate = (function($) {
 		var infiniteScrollInit = function(){
 			$searchContainer.scroll(function() {
     			if ( contentLoaded && (Math.abs($resultList.offset().top) + moduleHeight + scrollOffset > resultListHeight)){
-    				serviceCall($searchField.val(), page++);
+    				serviceCall($searchField.val(), globalPageNumber++);
     			}  
 			});
 		};
@@ -131,8 +131,8 @@ mediaEmbedModule.populate = (function($) {
 				if( event.keyCode == 13){
 					event.preventDefault();
 					$resultList.html('');
-					page = 1;
-					serviceCall($searchField.val(), page);
+					globalPageNumber = 0;
+					serviceCall($searchField.val(), globalPageNumber);
 				}
 				else{
 					//maybe do something else
@@ -204,7 +204,7 @@ mediaEmbedModule.populate = (function($) {
 			}
 			setBindings();
 			infiniteScrollInit();
-			serviceCall($searchField.val(), page);
+			serviceCall($searchField.val(), 0);
 		};
 		//Return only the init function, keeping all others private.
 		return{
