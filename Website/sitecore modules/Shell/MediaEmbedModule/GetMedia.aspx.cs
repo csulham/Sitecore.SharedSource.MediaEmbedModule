@@ -24,33 +24,8 @@ namespace Website.sitecore_modules.Shell.MediaEmbedModule
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			//var flickr = new Flickr(ConfigurationManager.AppSettings["FlickrApiKey"], ConfigurationManager.AppSettings["FlickrSecret"]);
-			//var options = new PhotoSearchOptions();			
-			//options.Tags = tags.TagList = SearchBox.Text;
-			//options.SafeSearch = SafetyLevel.Moderate;
-			//int page;
-			//int.TryParse(PageNumber.Text, out page);
-			//options.Page = page;
-			//options.PerPage = 9;
-
-			//PageNumber.Text = page.ToString();
-
-			//if (string.IsNullOrEmpty(SearchBox.Text))
-			//{
-			//	options.Tags = "Trees";
-			//}
-			//tags.Results = flickr.PhotosSearch(options);
-
-			//MediaEmbedRepeater.DataSource = tags.Results;
-			//MediaEmbedRepeater.DataBind();
-
-			//PageNumber.Text = "1";
 		}
 
-		//protected void BindRepeater(object sender, RepeaterItemEventArgs e)
-		//{
-		//	throw new NotImplementedException();
-		//}
 		protected void NextPage(object sender, EventArgs e)
 		{
 			var s = "";
@@ -73,7 +48,7 @@ namespace Website.sitecore_modules.Shell.MediaEmbedModule
 			int perPage = 9;
 			Int32.TryParse(flickrSettings.Fields["Results Per Page"].Value, out perPage);
 			options.PerPage = perPage;
-			if (string.IsNullOrEmpty(search))
+			if (string.IsNullOrEmpty(search) && flickrSettings.Fields["Defaults Tags"].HasValue)
 				search = flickrSettings.Fields["Defaults Tags"].Value;
 			if (string.IsNullOrEmpty(search))
 				return new PhotoCollection();

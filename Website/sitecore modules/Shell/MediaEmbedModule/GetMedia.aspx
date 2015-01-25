@@ -1,6 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetMedia.aspx.cs" Inherits="Website.sitecore_modules.Shell.MediaEmbedModule.GetMedia" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GetMedia.aspx.cs" Inherits="Website.sitecore_modules.Shell.MediaEmbedModule.GetMedia" %>
 
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html>
 <head>
