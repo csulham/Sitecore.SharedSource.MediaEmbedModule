@@ -102,6 +102,7 @@
     <Content Include="packages.config" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\gulp\.gitignore" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\gulp\gulpfile.js" />
+    <Content Include="sitecore modules\Shell\MediaEmbedModule\js\imagesloaded.js" />
     <Content Include="Web.config" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\data\api.js" />
     <Content Include="sitecore modules\Shell\MediaEmbedModule\gulp\package.json" />

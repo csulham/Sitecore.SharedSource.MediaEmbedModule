@@ -11,6 +11,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.2.2/masonry.pkgd.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/sharing_module.js" type="text/javascript" charset="utf-8" async></script>
+	<script src="js/imagesloaded.js" type="text/javascript" charset="utf-8" async></script>
 </head>
 <body>
 <form id="form1" runat="server">

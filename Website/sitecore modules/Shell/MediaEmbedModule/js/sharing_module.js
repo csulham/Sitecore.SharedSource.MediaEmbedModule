@@ -1,7 +1,7 @@
 var embedLink = "";
 var mediaEmbedModule = mediaEmbedModule || {};
 
-	mediaEmbedModule.populate = (function($){
+mediaEmbedModule.populate = (function($) {
 		'use strict ';
 		var servicePath = 'GetMedia.aspx/GetMore',
 			$module = $('.sitecore-shared-source-media-embed-module'),
@@ -37,7 +37,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 
 		//Debug Object Block.
 		debug.on = true;
-		if (debug.on){
+		if (debug.on) {
 			//Set Debug Styles.
 			debug.theme1 = "background-color: #78AE32;color: #FFFFFF; font-weight: 100; line-height: 2em; padding: .5em; font-family: Helvetica;";
 			debug.theme2 = "color: #FFFFFF; background-color: #777777; font-weight: 100; line-height: 2em; padding: .5em; font-family: Helvetica;";
@@ -46,63 +46,66 @@ var mediaEmbedModule = mediaEmbedModule || {};
 		}
 
 		//Debug Function Call
-		var debugData = function(){
-			if (debug.on){
-				console.log("%c" + 'Debug On', debug.theme3);	
+		var debugData = function() {
+			if (debug.on) {
+				console.log("%c" + 'Debug On', debug.theme3);
 			}
 		}
 		//JSON call to the api
-		var serviceCall = function (search, page) {
+		var serviceCall = function(search, page) {
 			$searchContainer.off('scroll');
 			$.ajax({
-				url: "GetMedia.aspx/GetMore",
-				type: "POST",
-				dataType: "json",
-				data: "{'search': '" + search + "', 'page': " + page + "}",
-				contentType: "application/json; charset=utf-8"
-			})
-			.done(function(data) {
-				console.log("%c" + 'Success', debug.theme1);
-				contentLoaded = true;
+					url: "GetMedia.aspx/GetMore",
+					type: "POST",
+					dataType: "json",
+					data: "{'search': '" + search + "', 'page': " + page + "}",
+					contentType: "application/json; charset=utf-8"
+				})
+				.done(function(data) {
+					console.log("%c" + 'Success', debug.theme1);
+					contentLoaded = true;
 
-				results = data.d;
-				populateView();
+					results = data.d;
+					populateView();
 					infiniteScrollInit();
 				})
-			.fail(function(data) {
-				console.log("%c" + 'Error', debug.theme4);
-			})
-			.always(function() {
-				console.log("%c" + 'Complete', debug.theme2);
-				resultListHeight = $resultList.outerHeight();
-			});	
+				.fail(function(data) {
+					console.log("%c" + 'Error', debug.theme4);
+				})
+				.always(function() {
+					console.log("%c" + 'Complete', debug.theme2);
+					resultListHeight = $resultList.outerHeight();
+				});
 		};
 
 		//Update the Result list with photos from the API.
-		var populateView = function(){
+		var populateView = function() {
 			$.each(results, function(index, image) {
 				console.log();
-					currentResult = $('<li>', {
-						'class' : resultItem,
-						'html' : $('<img/>', {
-		    				title: image.title,
-		    				rel: 'external',
-		    				src: image.MediumUrl
-						}).attr({"data-smallurl": image.SmallUrl, 
-								"data-largeurl": image.LargeUrl,
-								"data-mediumurl" : image.MediumUrl,
-								"data-title" : image.Title
-							})
+				currentResult = $('<li>', {
+					'class': resultItem,
+					'html': $('<img/>', {
+						title: image.title,
+						rel: 'external',
+						src: image.MediumUrl
+					}).attr({
+						"data-smallurl": image.SmallUrl,
+						"data-largeurl": image.LargeUrl,
+						"data-mediumurl": image.MediumUrl,
+						"data-title": image.Title
+					})
 
-					});
-					$resultList.masonry().append(currentResult).masonry('appended', currentResult);
+				});
+				$resultList.masonry().append(currentResult).masonry('appended', currentResult);
 			});
-			//Call The Masonry plugin
-			$resultList.masonry({
+			$resultList.imagesLoaded(function () {
+				//Call The Masonry plugin
+				$resultList.masonry({
 				columnWidth: "." + resultItem,
-  				itemSelector: "." + resultItem
-			})
-		};
+				itemSelector: "." + resultItem
+			});
+		});
+	};
 
 		//Trigger a new API call on scroll at a certain threshold
 		var infiniteScrollInit = function(){
@@ -201,7 +204,7 @@ var mediaEmbedModule = mediaEmbedModule || {};
 			}
 			setBindings();
 			infiniteScrollInit();
-			window.setTimeout(serviceCall($searchField.val(), page),500);
+			serviceCall($searchField.val(), page);
 		};
 		//Return only the init function, keeping all others private.
 		return{
